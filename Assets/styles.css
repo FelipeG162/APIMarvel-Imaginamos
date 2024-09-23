@@ -1,0 +1,151 @@
+﻿/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+}
+
+/* Formulario de filtro */
+.filter-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+    .filter-form input[type="text"] {
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .filter-form input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .filter-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+/* Grid de personajes */
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Tarjetas de personajes */
+.character-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+    .character-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Imagen circular */
+    .character-card img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .character-card:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Título del personaje */
+    .character-card h3 {
+        font-size: 1.6em;
+        margin: 10px 0;
+        color: #222;
+    }
+
+    /* Descripción */
+    .character-card p {
+        font-size: 1em;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .character-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .character-card h3 {
+        font-size: 1.4em;
+    }
+
+    .character-card p {
+        font-size: 0.9em;
+    }
+}
+
+/* Estilos del paginador */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+    .pagination-container a {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+        .pagination-container a:hover {
+            background-color: #0056b3;
+        }
+
+        .pagination-container a.active {
+            background-color: #0056b3;
+            cursor: default;
+        }
